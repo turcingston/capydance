@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capydance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon (3).ico">
+</head>
+<body>
+    <div id="exit-indicator" class="hidden">Press Escape to go back to the menu</div>
+    <div id="made-by">Made by Ondřej Turčín 2024</div>
+
+    <div class="egg-container" id="fawk-egg" class="hidden">
+        <img src="lazerdim safari.png" alt="Fawk Easter Egg">
+    </div>
+    <div class="egg-container" id="freakybob-egg" class="hidden">
+        <img src="freaky spongebob.jpg" alt="Freakybob Easter Egg">
+    </div>
+    <div class="egg-container" id="goat-egg" class="hidden">
+        <img src="korny next up.jpg" alt="Goat Easter Egg">
+    </div>
+    <audio id="fawk-audio">
+        <source src="safari.mp3" type="audio/mpeg">
+        
+    </audio>
+    <audio id="freakybob-audio">
+        <source src="sponge.mp3" type="audio/mpeg">
+        
+    </audio>
+    <audio id="goat-audio">
+        <source src="goat.mp3" type="audio/mpeg">
+        
+    </audio>
+    <div id="menu-container" class="menu">
+        <h1 class="header">Capydance</h1>
+        <button class="menu-button" onclick="showSongSelection()">Play</button>
+        <button class="menu-button" onclick="showOptions()">Options</button>
+        <button class="menu-button" onclick="exitGame()">Exit</button>
+    </div>
+
+    <div id="song-selection-container" class="menu hidden">
+        <h2 class="selectsong">Select a Song</h2>
+        <button class="menu-button" onclick="startCountdown('been knew thattt.mp3', 'easy')">Level 1</button>
+        <button class="menu-button" onclick="startCountdown('ur the moon.mp3', 'medium')">Level 2</button>
+        <button class="menu-button" onclick="startCountdown('like thatttt.mp3', 'hard')">Level 3</button>
+        <button class="menu-button" onclick="showMenu()">Exit</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div class="track" id="track-left" data-key="ArrowLeft">
+            <img src="arrow-left.png" class="perfect-arrow" alt="Left">
+        </div>
+        <div class="track" id="track-down" data-key="ArrowDown">
+            <img src="arrow-down.png" class="perfect-arrow" alt="Down">
+        </div>
+        <div class="track" id="track-up" data-key="ArrowUp">
+            <img src="arrow-up.png" class="perfect-arrow" alt="Up">
+        </div>
+        <div class="track" id="track-right" data-key="ArrowRight">
+            <img src="arrow-right.png" class="perfect-arrow" alt="Right">
+        </div>
+        <img id="dinosaur" src="capybara sit.png" alt="Dancing Dinosaur">
+        <button class="menu-button" onclick="showMenu()" id="exit-button"></button>
+    </div>
+    <div id="score" class="hidden">Score: 0</div>
+
+    <audio id="music"></audio>
+    <audio id="countdown-audio" src="countdown-321-go.mp3"></audio>
+    <audio id="score-sound" src="score-soundd.mp3"></audio>
+
+    <div id="countdown">
+        <img id="countdown-3-img" src="countdown-3.png" class="countdown-img hidden" alt="3">
+        <img id="countdown-2-img" src="countdown-2.png" class="countdown-img hidden" alt="2">
+        <img id="countdown-1-img" src="countdown-1.png" class="countdown-img hidden" alt="1">
+        <img id="countdown-go-img" src="countdown-go.png" class="countdown-img hidden" alt="GO!">
+    </div>
+
+    <div id="score-screen-container" class="hidden">
+        <h2>Game Over</h2>
+        <p id="final-score">Your Score: 0</p>
+        <button class="menu-button" onclick="showMenu()">Back to Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
